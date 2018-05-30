@@ -1,0 +1,15 @@
+<aura:component>
+  <aura:attribute name="taskItem" type="Object" />
+  <lightning:card title="{!v.taskItem.Name}" iconName="standard:scan_card">
+    <p class="slds-text-heading--medium slds-p-horizontal--small">
+       {!v.taskItem.Description__c}
+    </p>
+    <aura:if isTrue="{!v.taskItem.Type__c != 'Habit'}">
+      <button name="Complete Task" class="slds-button slds-button_neutral"> Complete </button>
+    </aura:if>
+    <aura:if isTrue="{!v.taskItem.Type__c == 'Habit'}">
+      <button name="Positive" class="slds-button slds-button_success"> + </button>
+      <button name="Negative" class="slds-button slds-button_destructive"> - </button>
+    </aura:if>
+  </lightning:card>
+</aura:component>

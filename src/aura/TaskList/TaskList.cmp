@@ -1,0 +1,41 @@
+  <aura:component controller="TaskListController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+  <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+
+  <aura:attribute name="taskTODOItems" type="Object[]" />
+  <aura:attribute name="taskDailyItems" type="Object[]" />
+  <aura:attribute name="taskHabitItems" type="Object[]" />
+
+  <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+
+  <div class="slds-size_1-of-3">
+    <div class="slds-align_absolute-center" style="height: 5rem;">TO-DO</div>
+      <section class="slds-card__body">
+           <div id="list" class="row">
+              <aura:iteration items="{!v.taskTODOItems}" var="taskItem">
+                  <c:TaskDetail taskItem="{!taskItem}"/>
+              </aura:iteration>
+          </div>
+      </section>
+  </div>
+  <div class="slds-size_1-of-3">
+    <div class="slds-align_absolute-center" style="height: 5rem;">Daily</div>
+      <section class="slds-card__body">
+           <div id="list" class="row">
+              <aura:iteration items="{!v.taskDailyItems}" var="taskItem">
+                  <c:TaskDetail taskItem="{!taskItem}"/>
+              </aura:iteration>
+          </div>
+      </section>
+  </div>
+  <div class="slds-size_1-of-3">
+    <div class="slds-align_absolute-center" style="height: 5rem;">Habit</div>
+      <section class="slds-card__body">
+           <div id="list" class="row">
+              <aura:iteration items="{!v.taskHabitItems}" var="taskItem">
+                  <c:TaskDetail taskItem="{!taskItem}"/>
+              </aura:iteration>
+          </div>
+      </section>
+  </div>
+  </div>
+  </aura:component>

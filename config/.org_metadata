@@ -1,0 +1,158 @@
+[
+    {
+        "id": "ApexClass",
+        "type": {
+            "directoryName": "classes",
+            "inFolder": false,
+            "metaFile": true,
+            "suffix": "cls",
+            "xmlName": "ApexClass"
+        },
+        "title": "ApexClass",
+        "xmlName": "ApexClass",
+        "text": "ApexClass",
+        "key": "ApexClass",
+        "level": 1,
+        "hasChildTypes": false,
+        "isFolder": true,
+        "inFolder": false,
+        "cls": "folder",
+        "select": false,
+        "expanded": false,
+        "children": [
+            {
+                "createdById": "005f4000002PiXTAA0",
+                "createdByName": "Alejandro Mancebo",
+                "createdDate": "2018-05-28T19:01:17.000Z",
+                "fileName": "classes/EndOfDaySchedule.cls",
+                "fullName": "EndOfDaySchedule",
+                "id": "ApexClass.EndOfDaySchedule",
+                "lastModifiedById": "005f4000002PiXTAA0",
+                "lastModifiedByName": "Alejandro Mancebo",
+                "lastModifiedDate": "2018-05-28T19:13:09.000Z",
+                "manageableState": "unmanaged",
+                "type": "ApexClass",
+                "leaf": true,
+                "title": "EndOfDaySchedule",
+                "checked": false,
+                "text": "EndOfDaySchedule",
+                "cls": "",
+                "level": 2,
+                "isFolder": false,
+                "children": [],
+                "select": false
+            }
+        ]
+    },
+    {
+        "id": "ApexComponent",
+        "type": {
+            "directoryName": "components",
+            "inFolder": false,
+            "metaFile": true,
+            "suffix": "component",
+            "xmlName": "ApexComponent"
+        },
+        "title": "ApexComponent",
+        "xmlName": "ApexComponent",
+        "text": "ApexComponent",
+        "key": "ApexComponent",
+        "level": 1,
+        "hasChildTypes": false,
+        "isFolder": true,
+        "inFolder": false,
+        "cls": "folder",
+        "select": false,
+        "expanded": false,
+        "children": []
+    },
+    {
+        "id": "ApexPage",
+        "type": {
+            "directoryName": "pages",
+            "inFolder": false,
+            "metaFile": true,
+            "suffix": "page",
+            "xmlName": "ApexPage"
+        },
+        "title": "ApexPage",
+        "xmlName": "ApexPage",
+        "text": "ApexPage",
+        "key": "ApexPage",
+        "level": 1,
+        "hasChildTypes": false,
+        "isFolder": true,
+        "inFolder": false,
+        "cls": "folder",
+        "select": false,
+        "expanded": false,
+        "children": []
+    },
+    {
+        "id": "ApexTrigger",
+        "type": {
+            "directoryName": "triggers",
+            "inFolder": false,
+            "metaFile": true,
+            "suffix": "trigger",
+            "xmlName": "ApexTrigger"
+        },
+        "title": "ApexTrigger",
+        "xmlName": "ApexTrigger",
+        "text": "ApexTrigger",
+        "key": "ApexTrigger",
+        "level": 1,
+        "hasChildTypes": false,
+        "isFolder": true,
+        "inFolder": false,
+        "cls": "folder",
+        "select": false,
+        "expanded": false,
+        "children": [
+            {
+                "createdById": "005f4000002PiXTAA0",
+                "createdByName": "Alejandro Mancebo",
+                "createdDate": "2018-05-28T17:57:46.000Z",
+                "fileName": "triggers/completeHTaskTrigger.trigger",
+                "fullName": "completeHTaskTrigger",
+                "id": "ApexTrigger.completeHTaskTrigger",
+                "lastModifiedById": "005f4000002PiXTAA0",
+                "lastModifiedByName": "Alejandro Mancebo",
+                "lastModifiedDate": "2018-05-29T14:01:51.000Z",
+                "manageableState": "unmanaged",
+                "type": "ApexTrigger",
+                "leaf": true,
+                "title": "completeHTaskTrigger",
+                "checked": false,
+                "text": "completeHTaskTrigger",
+                "cls": "",
+                "level": 2,
+                "isFolder": false,
+                "children": [],
+                "select": false
+            }
+        ]
+    },
+    {
+        "id": "StaticResource",
+        "type": {
+            "directoryName": "staticresources",
+            "inFolder": false,
+            "metaFile": true,
+            "suffix": "resource",
+            "xmlName": "StaticResource"
+        },
+        "title": "StaticResource",
+        "xmlName": "StaticResource",
+        "text": "StaticResource",
+        "key": "StaticResource",
+        "level": 1,
+        "hasChildTypes": false,
+        "isFolder": true,
+        "inFolder": false,
+        "cls": "folder",
+        "select": false,
+        "expanded": false,
+        "children": []
+    }
+]
