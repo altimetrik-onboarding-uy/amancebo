@@ -1,41 +1,71 @@
-  <aura:component controller="TaskListController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
-  <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
-
-  <aura:attribute name="taskTODOItems" type="Object[]" />
-  <aura:attribute name="taskDailyItems" type="Object[]" />
-  <aura:attribute name="taskHabitItems" type="Object[]" />
-
-  <div class="demo-only demo-only--sizing slds-grid slds-wrap">
-
-  <div class="slds-size_1-of-3">
-    <div class="slds-align_absolute-center" style="height: 5rem;">TO-DO</div>
-      <section class="slds-card__body">
-           <div id="list" class="row">
-              <aura:iteration items="{!v.taskTODOItems}" var="taskItem">
-                  <c:TaskDetail taskItem="{!taskItem}"/>
-              </aura:iteration>
-          </div>
-      </section>
-  </div>
-  <div class="slds-size_1-of-3">
-    <div class="slds-align_absolute-center" style="height: 5rem;">Daily</div>
-      <section class="slds-card__body">
-           <div id="list" class="row">
-              <aura:iteration items="{!v.taskDailyItems}" var="taskItem">
-                  <c:TaskDetail taskItem="{!taskItem}"/>
-              </aura:iteration>
-          </div>
-      </section>
-  </div>
-  <div class="slds-size_1-of-3">
-    <div class="slds-align_absolute-center" style="height: 5rem;">Habit</div>
-      <section class="slds-card__body">
-           <div id="list" class="row">
-              <aura:iteration items="{!v.taskHabitItems}" var="taskItem">
-                  <c:TaskDetail taskItem="{!taskItem}"/>
-              </aura:iteration>
-          </div>
-      </section>
-  </div>
-  </div>
-  </aura:component>
+<aura:component controller="TaskListController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    
+    <aura:attribute name="taskTODOItems" type="HTask__c[]" />
+    <aura:attribute name="taskDailyItems" type="HTask__c[]" />
+    <aura:attribute name="taskHabitItems" type="HTask__c[]" />
+    
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <div class="slds-card__body slds-align_absolute-center slds-grid slds-grid_vertical">
+                <div class="slds-box slds-box_xx-small">
+                    <div class="slds-align_absolute-center slds-row slds-box slds-box_xx-small">TO-DO</div>
+                    <!--
+                    <section class="slds-card__body slds-align_absolute-center slds-row" style="height: 5rem;">
+                        <button onClick="createTask('TO-DO')">Add new TO-DO Task</button>
+                    </section>
+                    -->
+                    <section class="slds-card__body slds-row">
+                        <div id="list" class="row">
+                            <aura:iteration items="{!v.taskTODOItems}" var="taskItem">
+                                <c:TaskDetail taskItem="{!taskItem}"/>
+                            </aura:iteration>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-col">
+            <div class="slds-card__body slds-align_absolute-center slds-grid slds-grid_vertical">
+                <div class="slds-box slds-box_xx-small">
+                    <div class="slds-align_absolute-center slds-row slds-box slds-box_xx-small">Daily</div>
+                    <!--
+                    <section class="slds-card__body slds-align_absolute-center slds-row" style="height: 5rem;">
+                        <button onClick="createTask('Daily')">Add new Daily Task</button>
+                    </section>
+                    -->
+					<section class="slds-card__body slds-row">
+                        <div id="list" class="row">                            
+                            <aura:iteration items="{!v.taskDailyItems}" var="taskItem">
+                                <c:TaskDetail taskItem="{!taskItem}"/>
+                            </aura:iteration>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-col">
+            <div class="slds-grid slds-grid_vertical">
+                <div class="slds-card__body slds-align_absolute-center slds-col">
+                    <div class="slds-box slds-box_xx-small">
+                        <div class="slds-align_absolute-center slds-row slds-box slds-box_xx-small">Habit</div>
+                        <!--
+                        <section class="slds-card__body slds-align_absolute-center slds-row" style="height: 5rem;">
+                            <button onClick="createTask('Habit')">Add new Habit Task</button>
+                        </section>
+                        -->
+						<section class="slds-card__body slds-row">
+                            <div id="list" class="row">
+                                <aura:iteration items="{!v.taskHabitItems}" var="taskItem">
+                                    <c:TaskDetail taskItem="{!taskItem}" habitPoints="1"/>
+                                </aura:iteration>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

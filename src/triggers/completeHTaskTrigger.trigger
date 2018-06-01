@@ -11,16 +11,18 @@ trigger completeHTaskTrigger on HTask__c (before update) {
             }
             else{
                 conta.Points__c -= (task.Points__c/2);
-            }            
+            }
+            
+            update conta;            
         }
     }
     else if(task.Type__c == 'Daily'){
         if(Trigger.New[0].Status__c == 'Completed' && task.Status__c <> 'Completed'){
-            if(task.DueDate__c <> null || task.DueDate__c <= Datetime.now()){
-                conta.Points__c += task.Points__c;
-            }      
+            conta.Points__c += task.Points__c;
+            
+            update conta;
         }
     }
     
-    update conta;
+    
 }

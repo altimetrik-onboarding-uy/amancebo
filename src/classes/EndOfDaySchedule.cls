@@ -8,11 +8,21 @@ global class EndOfDaySchedule implements Schedulable {
                                 AND Type__c = 'Daily' 
                                 AND DueDate__c < :Date.today()];
         
+        Map<string, Contact> lcont = new Map<string, Contact>();
+        
         for(HTask__c task:ltask){            
-            Contact conta = [SELECT Id, Name FROM Contact WHERE Id = :task.Contact__c];
-            conta.Points__c -= task.Points__c;
             
-            update conta;
+            if(lcont.containsKey(task.Id)){
+                Contact conta = [SELECT Id, Name, Points__c FROM Contact WHERE Id = :task.Contact__c];
+                conta.Points__c -= task.Points__c;
+                lcont.put(conta.Id, conta);
+            }
+            else{
+                Contact conta = lcont.get(task.Id);
+                conta.Points__c  -= task.Points__c;
+            }
         }
+        
+        update lcont.values();
     }
 }

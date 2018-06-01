@@ -1,10 +1,15 @@
 .THIS {
+	background-color:#1589FF;
+    height:100;
+    padding-bottom:10px;
+    padding-top:30px;
+    padding-bottom:30px;
 }
 
-.toggle {
-  display:hidden;  
+.THIS .slds-box {
+    background-color:grey;
 }
 
-.untoggle {
-  display:block;
+.THIS .titleTask {
+    background-color:blue;
 }
