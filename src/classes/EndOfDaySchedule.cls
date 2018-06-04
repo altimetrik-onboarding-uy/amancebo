@@ -1,6 +1,13 @@
 global class EndOfDaySchedule implements Schedulable {
     
     global void execute(SchedulableContext SC) {
+       
+    	resolveDailyTaskPoints();
+        
+        resetTaskStatus();
+    }
+    
+    private static void resolveDailyTaskPoints(){
         
         List<HTask__c> ltask = [SELECT Id 
                                 FROM HTask__c 
@@ -24,5 +31,19 @@ global class EndOfDaySchedule implements Schedulable {
         }
         
         update lcont.values();
+    }
+    
+    private static void resetTaskStatus(){
+        
+        List<HTask__c> ltask = [SELECT Id 
+                                FROM HTask__c 
+                                WHERE Status__c <> 'New' 
+                                AND Type__c <> 'TO-DO'];
+        
+        for(HTask__c task : ltask){
+            task.Status__c = 'New';
+        }
+        
+        update ltask;
     }
 }

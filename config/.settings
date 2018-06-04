@@ -12,6 +12,10 @@
         "ApexComponent",
         "ApexPage",
         "ApexTrigger",
+        "AppMenu",
+        "AuraDefinitionBundle",
+        "CustomObject",
+        "Layout",
         "StaticResource"
     ]
 }
