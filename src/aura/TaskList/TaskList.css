@@ -1,0 +1,19 @@
+.THIS {
+	background-color:#1a1b1e;
+    height:100;
+    padding-bottom:10px;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+.THIS .slds-box {
+    background-color:#ecebea;
+}
+
+.THIS .titleTask {
+    background-color:#ecebea;
+}
+
+.THIS .slds-grid {
+    padding-bottom:30px;
+}

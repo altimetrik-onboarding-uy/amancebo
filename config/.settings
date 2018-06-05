@@ -1,0 +1,21 @@
+{
+    "projectName": "HabiticaProject",
+    "username": "amancebo.habitica@altimetrik.com",
+    "id": "dd9b31c0-634c-11e8-aa2a-c33288b92497",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://na59.salesforce.com",
+    "workspace": "C:\\Projects",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AppMenu",
+        "AuraDefinitionBundle",
+        "CustomObject",
+        "Layout",
+        "StaticResource"
+    ]
+}

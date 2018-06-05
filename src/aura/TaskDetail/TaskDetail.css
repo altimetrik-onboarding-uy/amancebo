@@ -1,0 +1,11 @@
+.THIS {
+    min-width:320px;
+    max-width:360px;
+    padding-left:30px;
+    padding-right:30px;
+    
+}
+
+.THIS .toggle{
+  display: none;
+}
