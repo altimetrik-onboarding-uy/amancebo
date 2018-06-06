@@ -5,8 +5,6 @@ global class TaskListControllerTest {
 		Contact cont1 = new Contact(LastName = 'TestContact2');
 		upsert cont1;
 
-		cont1 = [SELECT Id FROM Contact WHERE LastName = 'TestContact2'];
-
 		HTask__c task1 = new HTask__c(Name = 'Test1', Type__c = 'Daily', Status__c = 'New', Contact__c = cont1.Id);
 		HTask__c task2 = new HTask__c(Name = 'Test2', Type__c = 'Daily', Status__c = 'Completed', Contact__c = cont1.Id);
 
@@ -21,11 +19,9 @@ global class TaskListControllerTest {
 		test.startTest();
 
 		Contact cont1 = [SELECT Id FROM Contact WHERE LastName = 'TestContact2'];
-		HTask__c task1 = new HTask__c(Name = 'Test1', Type__c = 'Daily', Status__c = 'New', Contact__c = cont1.Id);
-		HTask__c task2 = new HTask__c(Name = 'Test2', Type__c = 'Daily', Status__c = 'Completed', Contact__c = cont1.Id);
 
 		List<HTask__c> ltask = TaskListController.getAllTasks();
-		
+
 		Boolean contains1 = false;
 		Boolean contains2 = false;
 		for(HTask__c task : ltask){
@@ -42,18 +38,15 @@ global class TaskListControllerTest {
 			}
 		}
 
-		System.assertEquals(true, contains1 && contains2);
-
 		test.stopTest();
+
+		System.assertEquals(true, contains1 && contains2);
 	}
 
 	@isTest static void getAllUncompletedTaskTest(){
 		test.startTest();
 
 		Contact cont1 = [SELECT Id FROM Contact WHERE LastName = 'TestContact2'];
-
-		HTask__c task1 = new HTask__c(Name = 'Test1', Type__c = 'Daily', Status__c = 'New', Contact__c = cont1.Id);
-		HTask__c task2 = new HTask__c(Name = 'Test2', Type__c = 'Daily', Status__c = 'Completed', Contact__c = cont1.Id);
 
 		List<HTask__c> ltask = TaskListController.getAllUncompletedTask();
 
@@ -67,14 +60,10 @@ global class TaskListControllerTest {
 			if(task.Name == 'Test2'){
 				contains2 = true;
 			}
-
-			if(contains1 && contains2){
-				break;
-			}
 		}
 
-		System.assertEquals(true, contains1 && !contains2);
-
 		test.stopTest();
+
+		System.assertEquals(true, contains1 && !contains2);
 	}
 }

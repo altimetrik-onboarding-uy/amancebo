@@ -4,8 +4,6 @@ global class TaskDetailControllerTest {
 		Contact cont1 = new Contact(LastName = 'TestContact1', Points__c = 10);
 		upsert cont1;
 
-		cont1 = [SELECT Id, Name FROM Contact WHERE LastName = 'TestContact1'];
-
 		HTask__c task1 = new HTask__c(Name = 'Test1', Type__c = 'Daily', Status__c = 'New', Contact__c = cont1.Id);
 		HTask__c task2 = new HTask__c(Name = 'Test2', Type__c = 'Habit', Difficulty__c = 'Hard', Status__c = 'New', Contact__c = cont1.Id, RecordTypeId = '012f4000000FUKDAA4');
 
@@ -39,5 +37,17 @@ global class TaskDetailControllerTest {
 
 		Contact contAfter = [SELECT Id, Points__c FROM Contact WHERE Lastname = 'TestContact1'];
 		System.assertEquals(contAfter.Points__c, contBefore.Points__c + task.Points__c);
+	}
+
+	@isTest static void deleteTaskTest(){
+		HTask__c task = [SELECT Id, Points__c FROM HTask__c WHERE Name = 'Test1'];
+
+		test.startTest();
+		TaskDetailController.deleteTask(task);
+		test.stopTest();
+
+		List<HTask__c> ltask = [SELECT Id FROM HTask__c WHERE Name = 'Test1'];
+
+		System.assertEquals(new List<HTask__c>(), ltask);
 	}
 }
