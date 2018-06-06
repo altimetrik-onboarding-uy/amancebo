@@ -1,0 +1,71 @@
+42.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous:       Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+Execute Anonymous:       Messaging.reserveSingleEmailCapacity(2);
+Execute Anonymous:       String[] toAddresses = new String[]{ 'amancebo@altimetrik.com' };
+Execute Anonymous:       mail.setToAddresses(toAddresses);
+Execute Anonymous:       mail.setSenderDisplayName('Altibitica Support');
+Execute Anonymous:       mail.setSubject('You dont complete some daily task yesterday');
+Execute Anonymous:       mail.setReplyTo('amancebo@altimetrik.com');
+Execute Anonymous:       mail.setBccSender(false);
+Execute Anonymous:       mail.setUseSignature(false);
+Execute Anonymous:       mail.setPlainTextBody('Hola');
+Execute Anonymous:       Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
+15:11:20.1 (1207590)|USER_INFO|[EXTERNAL]|005f4000002PiXT|amancebo.habitica@altimetrik.com|Argentine Time|GMT-03:00
+15:11:20.1 (1232808)|EXECUTION_STARTED
+15:11:20.1 (1237487)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+15:11:20.1 (1387043)|VARIABLE_SCOPE_BEGIN|[1]|mail|Messaging.SingleEmailMessage|true|false
+15:11:20.1 (1449613)|VARIABLE_SCOPE_BEGIN|[3]|toAddresses|List<String>|true|false
+15:11:20.1 (1588659)|HEAP_ALLOCATE|[72]|Bytes:3
+15:11:20.1 (1657252)|HEAP_ALLOCATE|[77]|Bytes:152
+15:11:20.1 (1674471)|HEAP_ALLOCATE|[342]|Bytes:408
+15:11:20.1 (1688922)|HEAP_ALLOCATE|[355]|Bytes:408
+15:11:20.1 (1704189)|HEAP_ALLOCATE|[467]|Bytes:48
+15:11:20.1 (1734776)|HEAP_ALLOCATE|[139]|Bytes:6
+15:11:20.1 (1757799)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:23
+15:11:20.1 (1907715)|STATEMENT_EXECUTE|[1]
+15:11:20.1 (1910455)|STATEMENT_EXECUTE|[1]
+15:11:20.1 (2159791)|VARIABLE_ASSIGNMENT|[1]|mail|"common.api.soap.wsdl.SingleEmailMessage@271c5f96"|0x69ab9f1b
+15:11:20.1 (2174610)|STATEMENT_EXECUTE|[2]
+15:11:20.1 (2226176)|HEAP_ALLOCATE|[50]|Bytes:5
+15:11:20.1 (2252550)|HEAP_ALLOCATE|[56]|Bytes:5
+15:11:20.1 (2261115)|HEAP_ALLOCATE|[64]|Bytes:7
+15:11:20.1 (2534551)|STATEMENT_EXECUTE|[3]
+15:11:20.1 (2552249)|HEAP_ALLOCATE|[3]|Bytes:4
+15:11:20.1 (2585690)|HEAP_ALLOCATE|[3]|Bytes:23
+15:11:20.1 (2630870)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:11:20.1 (2652508)|VARIABLE_ASSIGNMENT|[3]|toAddresses|["amancebo@altimetrik. (3 more) ..."]|0x2d88a6f0
+15:11:20.1 (2659275)|STATEMENT_EXECUTE|[4]
+15:11:20.1 (2715322)|STATEMENT_EXECUTE|[5]
+15:11:20.1 (2719583)|HEAP_ALLOCATE|[5]|Bytes:18
+15:11:20.1 (2772338)|STATEMENT_EXECUTE|[6]
+15:11:20.1 (2775993)|HEAP_ALLOCATE|[6]|Bytes:43
+15:11:20.1 (2794009)|STATEMENT_EXECUTE|[7]
+15:11:20.1 (2806315)|STATEMENT_EXECUTE|[8]
+15:11:20.1 (2825788)|STATEMENT_EXECUTE|[9]
+15:11:20.1 (2839309)|STATEMENT_EXECUTE|[10]
+15:11:20.1 (2842455)|HEAP_ALLOCATE|[10]|Bytes:4
+15:11:20.1 (2856029)|STATEMENT_EXECUTE|[11]
+15:11:20.1 (2882423)|HEAP_ALLOCATE|[11]|Bytes:4
+15:11:20.1 (2954681)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:11:20.1 (2977132)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:11:20.1 (36204383)|EMAIL_QUEUE|[11]|replyTo: amancebo@altimetrik.com, subject: You dont complete some daily task yesterday, senderDisplayName: Altibitica Support, bccSender: false, saveAsActivity: true, useSignature: false, toAddresses: [amancebo@altimetrik.com], plainTextBody: Hola, 
+15:11:20.1 (36303899)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:11:20.57 (57030302)|CUMULATIVE_LIMIT_USAGE
+15:11:20.57 (57030302)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:11:20.57 (57030302)|CUMULATIVE_LIMIT_USAGE_END
+
+15:11:20.1 (57078861)|CODE_UNIT_FINISHED|execute_anonymous_apex
+15:11:20.1 (58012825)|EXECUTION_FINISHED

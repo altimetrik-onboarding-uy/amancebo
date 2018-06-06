@@ -162,7 +162,7 @@
         "id": "0Adf4000001U69kCAC",
         "lastModifiedById": "005f4000002PiXTAA0",
         "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-01T17:57:44.000Z",
+        "lastModifiedDate": "2018-06-05T19:02:43.000Z",
         "manageableState": "unmanaged",
         "type": "AuraDefinitionBundle",
         "mmState": "clean"
@@ -218,7 +218,7 @@
         "id": "0Adf4000001U69BCAS",
         "lastModifiedById": "005f4000002PiXTAA0",
         "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-01T17:58:42.000Z",
+        "lastModifiedDate": "2018-06-05T18:25:05.000Z",
         "manageableState": "unmanaged",
         "type": "AuraDefinitionBundle",
         "mmState": "clean"
@@ -302,7 +302,7 @@
         "id": "0Adf4000001U69VCAS",
         "lastModifiedById": "005f4000002PiXTAA0",
         "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-01T15:48:42.000Z",
+        "lastModifiedDate": "2018-06-05T19:20:25.000Z",
         "manageableState": "unmanaged",
         "type": "AuraDefinitionBundle",
         "mmState": "clean"
@@ -338,13 +338,13 @@
     "Contact.object": {
         "createdById": "005f4000002PiXTAA0",
         "createdByName": "Alejandro Mancebo",
-        "createdDate": "2018-06-05T14:48:53.115Z",
+        "createdDate": "2018-06-06T13:02:59.086Z",
         "fileName": "unpackaged/objects/Contact.object",
         "fullName": "Contact",
         "id": "000000000000000AAA",
         "lastModifiedById": "005f4000002PiXTAA0",
         "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-05T14:48:53.115Z",
+        "lastModifiedDate": "2018-06-06T13:02:59.086Z",
         "type": "CustomObject",
         "mmState": "clean"
     },
@@ -404,6 +404,20 @@
         "type": "ApexClass",
         "mmState": "clean"
     },
+    "DailyTaskEmail.cls": {
+        "createdById": "005f4000002PiXTAA0",
+        "createdByName": "Alejandro Mancebo",
+        "createdDate": "2018-06-05T20:07:51.000Z",
+        "fileName": "unpackaged/classes/DailyTaskEmail.cls",
+        "fullName": "DailyTaskEmail",
+        "id": "01pf400000GkDWnAAN",
+        "lastModifiedById": "005f4000002PiXTAA0",
+        "lastModifiedByName": "Alejandro Mancebo",
+        "lastModifiedDate": "2018-06-05T20:48:29.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
     "TaskDetailController.cls": {
         "createdById": "005f4000002PiXTAA0",
         "createdByName": "Alejandro Mancebo",
@@ -413,7 +427,7 @@
         "id": "01pf400000GjGswAAF",
         "lastModifiedById": "005f4000002PiXTAA0",
         "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-04T19:53:22.000Z",
+        "lastModifiedDate": "2018-06-05T19:01:13.000Z",
         "manageableState": "unmanaged",
         "type": "ApexClass",
         "mmState": "clean"
@@ -474,16 +488,32 @@
         "type": "ApexClass",
         "mmState": "clean"
     },
-    "EndOfDaySchedule.cls": {
+    "DailyTaskEmailTest.cls": {
         "createdById": "005f4000002PiXTAA0",
         "createdByName": "Alejandro Mancebo",
-        "createdDate": "2018-05-28T19:01:17.000Z",
-        "fileName": "unpackaged/classes/EndOfDaySchedule.cls",
-        "fullName": "EndOfDaySchedule",
-        "id": "01pf400000FQMpSAAX",
+        "createdDate": "2018-06-05T20:08:23.000Z",
+        "fileName": "unpackaged/classes/DailyTaskEmailTest.cls",
+        "fullName": "DailyTaskEmailTest",
+        "id": "01pf400000GkDWsAAN",
         "lastModifiedById": "005f4000002PiXTAA0",
         "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-05T12:55:28.000Z",
+        "lastModifiedDate": "2018-06-05T20:13:37.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
+    "EndOfDaySchedule.cls": {
+        "id": "01pf400000FQMpSAAX",
+        "name": "EndOfDaySchedule",
+        "createdDate": "2018-05-28T19:01:17.000+0000",
+        "createdById": "005f4000002PiXTAA0",
+        "namespacePrefix": null,
+        "lastModifiedById": "005f4000002PiXTAA0",
+        "lastModifiedDate": "2018-06-06T13:53:03.000+0000",
+        "fullName": "EndOfDaySchedule",
+        "fileName": "unpackaged/classes/EndOfDaySchedule.cls",
+        "createdByName": "Alejandro Mancebo",
+        "lastModifiedByName": "Alejandro Mancebo",
         "manageableState": "unmanaged",
         "type": "ApexClass",
         "mmState": "clean"
@@ -500,6 +530,54 @@
         "lastModifiedDate": "2018-06-05T14:37:31.000Z",
         "manageableState": "unmanaged",
         "type": "ApexTrigger",
+        "mmState": "clean"
+    },
+    "EndOfDayEmail.cls": {
+        "id": "01pf400000GkECyAAN",
+        "name": "EndOfDayEmail",
+        "createdDate": "2018-06-06T13:04:04.000+0000",
+        "createdById": "005f4000002PiXTAA0",
+        "namespacePrefix": null,
+        "lastModifiedById": "005f4000002PiXTAA0",
+        "lastModifiedDate": "2018-06-06T13:40:39.000+0000",
+        "fullName": "EndOfDayEmail",
+        "fileName": "unpackaged/classes/EndOfDayEmail.cls",
+        "createdByName": "Alejandro Mancebo",
+        "lastModifiedByName": "Alejandro Mancebo",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
+    "ResetTaskStatusBatch.cls": {
+        "id": "01pf400000GkEDrAAN",
+        "name": "ResetTaskStatusBatch",
+        "createdDate": "2018-06-06T13:44:34.000+0000",
+        "createdById": "005f4000002PiXTAA0",
+        "namespacePrefix": null,
+        "lastModifiedById": "005f4000002PiXTAA0",
+        "lastModifiedDate": "2018-06-06T13:46:48.000+0000",
+        "fullName": "ResetTaskStatusBatch",
+        "fileName": "unpackaged/classes/ResetTaskStatusBatch.cls",
+        "createdByName": "Alejandro Mancebo",
+        "lastModifiedByName": "Alejandro Mancebo",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
+    "ResolveDailyTaskPointsBatch.cls": {
+        "id": "01pf400000GkEE1AAN",
+        "name": "ResolveDailyTaskPointsBatch",
+        "createdDate": "2018-06-06T13:48:37.000+0000",
+        "createdById": "005f4000002PiXTAA0",
+        "namespacePrefix": null,
+        "lastModifiedById": "005f4000002PiXTAA0",
+        "lastModifiedDate": "2018-06-06T13:52:03.000+0000",
+        "fullName": "ResolveDailyTaskPointsBatch",
+        "fileName": "unpackaged/classes/ResolveDailyTaskPointsBatch.cls",
+        "createdByName": "Alejandro Mancebo",
+        "lastModifiedByName": "Alejandro Mancebo",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
         "mmState": "clean"
     }
 }

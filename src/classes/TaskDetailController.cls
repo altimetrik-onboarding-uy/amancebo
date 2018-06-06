@@ -24,4 +24,10 @@ public class TaskDetailController {
 
       update cont;
   }
+
+	@AuraEnabled
+	public static void deleteTask(HTask__c task){
+
+		delete task;
+	}
 }
