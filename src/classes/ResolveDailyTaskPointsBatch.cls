@@ -1,17 +1,13 @@
-global class ResolveDailyTaskPointsBatch implements Database.Batchable<sObject> {
-
-	String query;
-
-	global ResolveDailyTaskPointsBatch() {
-
-	}
+global class ResolveDailyTaskPointsBatch implements Database.Batchable<SObject> {
 
 	global Database.QueryLocator start(Database.BatchableContext BC) {
-		return Database.getQueryLocator('SELECT Id, Contact__c, Points__c'
-		                                + 'FROM HTask__c'
-		                                + 'WHERE Status__c <> \'Completed\''
-		                                + 'AND Type__c = \'Daily\''
-		                                + 'AND DueDate__c < :Date.today()');
+
+		Date d = Date.today();
+			return Database.getQueryLocator([SELECT Id, Contact__c, Points__c
+																				FROM HTask__c
+																				WHERE Status__c <> 'Completed'
+																				AND Type__c = 'Daily'
+																				AND DueDate__c < :d]);
 	}
 
  	global void execute(Database.BatchableContext BC, List<HTask__c> scope) {

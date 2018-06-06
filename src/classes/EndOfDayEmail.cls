@@ -1,16 +1,10 @@
 global class EndOfDayEmail implements Database.Batchable<sObject> {
 
-	String query;
-
-	global EndOfDayEmail() {
-
-	}
-
 	global Database.QueryLocator start(Database.BatchableContext BC) {
-		return Database.getQueryLocator('SELECT Id, Name, Contact__c'
-																		+ 'FROM HTask__c'
-																		+ 'WHERE Status__c <> \'Completed\''
-																		+ 'AND Type__c = \'Daily\'');
+		return Database.getQueryLocator([SELECT Id, Name, Contact__c
+																		FROM HTask__c
+																		WHERE Status__c <> 'Completed'
+																		AND Type__c = 'Daily']);
 	}
 
  	global void execute(Database.BatchableContext BC, List<HTask__c> scope) {
