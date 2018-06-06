@@ -338,13 +338,13 @@
     "Contact.object": {
         "createdById": "005f4000002PiXTAA0",
         "createdByName": "Alejandro Mancebo",
-        "createdDate": "2018-06-06T18:38:00.457Z",
+        "createdDate": "2018-06-06T18:47:11.467Z",
         "fileName": "unpackaged/objects/Contact.object",
         "fullName": "Contact",
         "id": "000000000000000AAA",
         "lastModifiedById": "005f4000002PiXTAA0",
         "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-06T18:38:00.457Z",
+        "lastModifiedDate": "2018-06-06T18:47:11.467Z",
         "type": "CustomObject",
         "mmState": "clean"
     },
@@ -390,20 +390,6 @@
         "type": "Layout",
         "mmState": "clean"
     },
-    "TaskDetailControllerTest.cls": {
-        "createdById": "005f4000002PiXTAA0",
-        "createdByName": "Alejandro Mancebo",
-        "createdDate": "2018-06-04T17:30:06.000Z",
-        "fileName": "unpackaged/classes/TaskDetailControllerTest.cls",
-        "fullName": "TaskDetailControllerTest",
-        "id": "01pf400000GkAvCAAV",
-        "lastModifiedById": "005f4000002PiXTAA0",
-        "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-04T19:52:48.000Z",
-        "manageableState": "unmanaged",
-        "type": "ApexClass",
-        "mmState": "clean"
-    },
     "ResetTaskStatusBatchTest.cls": {
         "createdById": "005f4000002PiXTAA0",
         "createdByName": "Alejandro Mancebo",
@@ -414,6 +400,20 @@
         "lastModifiedById": "005f4000002PiXTAA0",
         "lastModifiedByName": "Alejandro Mancebo",
         "lastModifiedDate": "2018-06-06T18:20:36.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
+    "TaskDetailControllerTest.cls": {
+        "createdById": "005f4000002PiXTAA0",
+        "createdByName": "Alejandro Mancebo",
+        "createdDate": "2018-06-04T17:30:06.000Z",
+        "fileName": "unpackaged/classes/TaskDetailControllerTest.cls",
+        "fullName": "TaskDetailControllerTest",
+        "id": "01pf400000GkAvCAAV",
+        "lastModifiedById": "005f4000002PiXTAA0",
+        "lastModifiedByName": "Alejandro Mancebo",
+        "lastModifiedDate": "2018-06-04T19:52:48.000Z",
         "manageableState": "unmanaged",
         "type": "ApexClass",
         "mmState": "clean"
@@ -530,20 +530,6 @@
         "type": "ApexClass",
         "mmState": "clean"
     },
-    "EndOfDaySchedule.cls": {
-        "createdById": "005f4000002PiXTAA0",
-        "createdByName": "Alejandro Mancebo",
-        "createdDate": "2018-05-28T19:01:17.000Z",
-        "fileName": "unpackaged/classes/EndOfDaySchedule.cls",
-        "fullName": "EndOfDaySchedule",
-        "id": "01pf400000FQMpSAAX",
-        "lastModifiedById": "005f4000002PiXTAA0",
-        "lastModifiedByName": "Alejandro Mancebo",
-        "lastModifiedDate": "2018-06-06T17:44:28.000Z",
-        "manageableState": "unmanaged",
-        "type": "ApexClass",
-        "mmState": "clean"
-    },
     "ResolveDailyTaskPointsBatchTest.cls": {
         "createdById": "005f4000002PiXTAA0",
         "createdByName": "Alejandro Mancebo",
@@ -570,6 +556,22 @@
         "lastModifiedDate": "2018-06-05T14:37:31.000Z",
         "manageableState": "unmanaged",
         "type": "ApexTrigger",
+        "mmState": "clean"
+    },
+    "EndOfDaySchedulable.cls": {
+        "id": "01pf400000GkETGAA3",
+        "name": "EndOfDaySchedulable",
+        "createdDate": "2018-06-06T18:48:02.000+0000",
+        "createdById": "005f4000002PiXTAA0",
+        "namespacePrefix": null,
+        "lastModifiedById": "005f4000002PiXTAA0",
+        "lastModifiedDate": "2018-06-06T18:48:49.000+0000",
+        "fullName": "EndOfDaySchedulable",
+        "fileName": "unpackaged/classes/EndOfDaySchedulable.cls",
+        "createdByName": "Alejandro Mancebo",
+        "lastModifiedByName": "Alejandro Mancebo",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
         "mmState": "clean"
     }
 }

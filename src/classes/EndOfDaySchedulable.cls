@@ -1,4 +1,4 @@
-global class EndOfDaySchedule implements Schedulable {
+global class EndOfDaySchedulable implements Schedulable {
 
     global void execute(SchedulableContext SC) {
 
