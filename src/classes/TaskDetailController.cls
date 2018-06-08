@@ -1,4 +1,4 @@
-public with sharing class TaskDetailController {
+public class TaskDetailController {
 	@AuraEnabled
 	public static boolean changeStatus(HTask__c task, string status) {
 
@@ -10,17 +10,24 @@ public with sharing class TaskDetailController {
 			return true;
 		}
 		catch(Exception e){
+			System.debug(e);
 			return false;
 		}
 	}
 
-    @AuraEnabled
-    public static void HabitDone(HTask__c task, boolean positive){
+  @AuraEnabled
+  public static void habitDone(HTask__c task, boolean positive){
 
-        Contact cont = [SELECT Id, Name, Points__c FROM Contact WHERE Id = :task.Contact__c];
+      Contact cont = [SELECT Id, Name, Points__c FROM Contact WHERE Id = :task.Contact__c];
 
-        cont.Points__c = positive ? cont.Points__c + task.Points__c : cont.Points__c - task.Points__c;
+      cont.Points__c = positive ? cont.Points__c + task.Points__c : cont.Points__c - task.Points__c;
 
-        update cont;
-    }
+      update cont;
+  }
+
+	@AuraEnabled
+	public static void deleteTask(HTask__c task){
+
+		delete task;
+	}
 }
